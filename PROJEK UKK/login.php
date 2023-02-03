@@ -32,7 +32,7 @@ if(isset($_SESSION["username"])){
               </div>
               <div class="mb-3 mt-3 text-center">
                 PASSWORD : <br>
-                <input class="rounded-3 border-light" type="text" name="password"
+                <input class="rounded-3 border-light" type="password" name="password"
                 style="width: 300px;">
               </div>
               <div class="mb-3 mt-3 text-center">

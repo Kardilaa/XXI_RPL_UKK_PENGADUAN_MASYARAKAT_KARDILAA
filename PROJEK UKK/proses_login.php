@@ -6,9 +6,11 @@ $password = $_POST['password'];
 $level = $_POST['level'];
 
 $koneksi = new PDO("mysql:host=localhost;dbname=pengaduan_masyarakat", "root","");
-$query = $koneksi->query("SELECT * FROM petugas WHERE username='$username', password='$password' AND level='$level'");
+$query = $koneksi->query("SELECT * FROM petugas WHERE username='$username' AND password='$password'");
+
+// var_dump($query->rowCount());
     if($query->rowCount() > 0){
-        session_start();
+    session_start();
 
         $_SESSION["username"] = $_POST['username'];
         $_SESSION["password"] = $_POST['password'];
