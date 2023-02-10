@@ -6,7 +6,7 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
-  <body>
+  <body style="background:#44B5FF">
   <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -76,25 +76,43 @@
             </div>
         </div>
  
-    <from>
-    <div class="text-center fs-1"></div>
         <div class="container mt-3">
         <div class="row" >
         <div class="col-md-6 offset-md-3">
         <div class="card my-6">
-  <div class="card">
-  <img src="contoh.jpg" class="card-img-top" >
-  <div class="card-body">
-    <h5 class="card-title">sungai meluap lantaran sampah yg menyumbat</h5>
-    <p class="card-text">dikarna masyarakat sembarang </p>
-    <a href="#" class="btn btn-primary">posting keluhan</a>
+            <h2 class="mb-3 mt-4 text-center" style="color:rgb(61, 61, 61);">Isi Data Yang Ingin Anda Keluhkan</h2>
+            <div class="mb-3 mt-3 text-center">
+            <center><img src="galary.png"  width="200" height="150" type="file" name="foto" ></center>
+              
+              </div> 
+            <div class="mb-3 mt-3 text-center">
+              Id  : <br>
+                <input class="rounded-3 border-light" type="text" name="id_petugas" 
+                style="width: 300px;">
+              </div>
+              <div class="mb-3 mt-3 text-center">
+                Username : <br>
+                <input class="rounded-3 border-light" type="text" name="username" 
+                style="width: 300px;">
+              </div>
+              <div class="mb-3 mt-3 text-center">
+                Password : <br>
+                <input class="rounded-3 border-light" type="text" name="password" 
+                style="width: 300px;">
+              </div>
+              <div class="mb-3 mt-3 text-center">
+                No Hanphone : <br>
+                <input class="rounded-3 border-light" type="text" name="telp" 
+                style="width: 300px;">
+                
 </div>
-</div>
-</div>
-</div>  
-</div>
-</div>
-</from>
+              <div class="text-center mt-3"> 
+                <button type="submit" class="btn btn-success px-3 mb-3" style="width: 300px;">Simpan</button> <br>
+                
+                </div>
+              </div>
+              </div>
+            </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>

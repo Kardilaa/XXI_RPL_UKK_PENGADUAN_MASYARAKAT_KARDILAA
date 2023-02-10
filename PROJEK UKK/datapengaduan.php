@@ -93,6 +93,7 @@ $result = mysqli_query($db, "SELECT * FROM catatan_perjalanan");
 </head>
 <body style="background:#44B5FF">
 <div class="card my-4 mt-3">
+    <h1>Data Pengaduan Masyarakat</h1>
   <div class="d-grip gap-2 col-12 mt-2">
   <table class="table table-light table-hover table-borderless">
   <thead>

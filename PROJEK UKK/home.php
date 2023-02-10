@@ -7,7 +7,7 @@
     <link href="style.css" rel="stylesheet">
     <title>home</title>
 </head>
-<body>
+<body style="background:#44B5FF">
 <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -24,7 +24,7 @@
                     <li>
                         <a href="datapengaduan.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Pengaduan</span> </a>
-                        <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                        <ul class="collapse show nav flex-column ms-1"  data-bs-parent="#menu">
                            
                     </li>
                     <li>
@@ -84,10 +84,10 @@
       <img src="download.jpg" class="d-block w-100" alt="">
     </div>
     <div class="carousel-item">
-      <img src="Capture.PNG" class="d-block w-100" alt="...">
+      <img src="kii.PNG" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
+      <img src="kii.png" class="d-block w-100" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

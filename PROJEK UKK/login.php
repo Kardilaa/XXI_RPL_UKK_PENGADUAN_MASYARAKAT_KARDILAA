@@ -16,7 +16,7 @@ if(isset($_SESSION["username"])){
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     
 </head>
-<body style="background:warning" >
+<body style="background:#44B5FF" >
     <div style="padding: 50px;">
         <form action="proses_login.php"  method="POST">
         <div class="text-center fs-1"></div>
