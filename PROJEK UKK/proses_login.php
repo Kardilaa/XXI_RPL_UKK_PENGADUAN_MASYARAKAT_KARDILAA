@@ -6,7 +6,7 @@ $password = $_POST['password'];
 $level = $_POST['level'];
 
 $koneksi = new PDO("mysql:host=localhost;dbname=pengaduan_masyarakat", "root","");
-$query = $koneksi->query("SELECT * FROM petugas WHERE username='$username' AND password='$password'");
+$query = $koneksi->query("SELECT * FROM petugas WHERE username='$username' AND password='$password'  ");
 
 // var_dump($query->rowCount());
     if($query->rowCount() > 0){
@@ -19,3 +19,4 @@ $query = $koneksi->query("SELECT * FROM petugas WHERE username='$username' AND p
     }else{
         header("location:login.php");
     }
+    
