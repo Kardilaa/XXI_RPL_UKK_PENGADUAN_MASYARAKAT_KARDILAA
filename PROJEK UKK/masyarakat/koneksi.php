@@ -1,11 +1,10 @@
 <?php
-$servername = "localhost";
-$database = "pengaduan_masyarakat";
-$username = "root";
-$password = "";
- 
-// untuk tulisan bercetak tebal silakan sesuaikan dengan detail database Anda
-// membuat koneksi
-$conn = mysqli_connect($servername, $username, $password, $database);
-// mengecek koneksi
+$koneksi = new PDO("mysql:host=localhost;dbname=pengaduan_masyarakat", "root","");
+$query = $koneksi->query("SELECT FROM masyarakat where username='$username' AND password='$password' ");
 ?>
+<h1>masyarakat</h1>
+<?php while($result = $query->fetch()){
+    ?>
+    <p><?=$result['username']; ?>
+    <?php } ?>
+

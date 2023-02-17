@@ -1,5 +1,8 @@
+
 <!doctype html>
 <html lang="en">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +19,8 @@
                 </a>
      <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
       <li class="nav-item">
-        <a href="home.php" class="nav-link align-middle px-0"> <span class="ms-1 d-none d-sm-inline"> <ion-icon name="grid-outline">
-     <i class="fs-4 bi-house"></i>Home</span></ion-icon>
+        <a href="home.php" class="nav-link align-middle px-0"> <span class="ms-1 d-none d-sm-inline"> 
+     <i class="fs-4 bi-house"></i>Home</span>
          </a>
          </li>
          <li>
@@ -44,37 +47,27 @@
                 </div>
             </div>
         </div>
- 
+ <form action ="proses_tambahdata.php" method="POST" enctype="multipart/form-data">
         <div class="container mt-3">
         <div class="row" >
         <div class="col-md-6 offset-md-3">
         <div class="card my-6">
             <h2 class="mb-3 mt-4 text-center" style="color:rgb(61, 61, 61);">Isi Data Yang Ingin Anda Keluhkan</h2>
-            <div class="mb-3 mt-3 text-center">
-            <center><ion-icon name="images-outline" type="file" name="foto" ></ion-icon></center>
-              
-              </div> 
-            <div class="mb-3 mt-3 text-center">
-              Id  : <br>
-                <input class="rounded-3 border-light" type="text" name="id_petugas" 
-                style="width: 300px;">
-              </div>
               <div class="mb-3 mt-3 text-center">
-                Username : <br>
-                <input class="rounded-3 border-light" type="text" name="username" 
+                foto : <br>
+                <input class="rounded-3 border-light" type="file" name="foto" 
                 style="width: 300px;">
-              </div>
+              </div>    
               <div class="mb-3 mt-3 text-center">
-                Password : <br>
-                <input class="rounded-3 border-light" type="text" name="password" 
+                tanggal : <br>
+                <input class="rounded-3 border-light" type="date" name="tgl_pengaduan" 
                 style="width: 300px;">
-              </div>
+              </div>    
               <div class="mb-3 mt-3 text-center">
-                No Hanphone : <br>
-                <input class="rounded-3 border-light" type="text" name="telp" 
-                style="width: 300px;">
-                
-</div>
+                isi laporan : <br>
+                <input class="rounded-3 border-light " type="text" name="isi_laporan" 
+                style="width: 300px;">           
+      </div>
               <div class="text-center mt-3"> 
                 <button type="submit" class="btn btn-success px-3 mb-3" style="width: 300px;">Simpan</button> <br>
                 

@@ -1,7 +1,8 @@
 <?php
 session_start();
 $db =mysqli_connect("localhost","root","","pengaduan_masyarakat");
-$result = mysqli_query($db,"SELECT * FROM pengaduan");
+$id=$_GET['id_pengaduan'];
+$result = mysqli_query($db,"SELECT * FROM pengaduan where id_pengaduan=$id" );
 
 ?>
 <!Doctype html>
@@ -52,7 +53,6 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan");
                 </div>
             </div>
         </div>
-        <form>
 <div class="card my-4 mt-3">
     <h1>Data Pengaduan Masyarakat</h1>
   <div class="d-grip gap-2 col-12 mt-2">
@@ -64,7 +64,7 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan");
       <th scope="col">isi_laporan</th>
       <th scope="col">foto</th>
       <th scope="col">status</th>
-      <th scope="col">aksi</th>
+      
     </tr>
   </thead>
   <?php $i=1;?>
@@ -76,23 +76,27 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan");
       <td><?=$row['isi_laporan'];?></td>
       <td><?=$row['foto'];?></td>
       <td><?=$row['status'];?></td>
-      <td>
-      <a href="detail.php?id_pengaduan=<?php echo $row['id_pengaduan'];?>" class="btn btn-primary">detail</a>
-      <a href="update.php?id_pengaduan=<?php echo $row['id_pengaduan'];?>" class="btn btn-primary">UPDATE</a>
-        <a href="delete.php?id_pengaduan=<?=$data ['id_pengaduan'];?>"onclick="return confirm('anda yakin ingin hapus')" class="btn btn-danger btn-sm">DELETE</a>
-    </td>
+     
     </tr>
     </tbody>
     <?php $i++; ?>
     <?php endwhile ?>
     </table>
-    <hr>
-   c
+    <h2>TANGGAPAN</h2>
+    <div class="">
+      <?php
+      $query=$db->query("select * from tanggapan where id_petugas=$id");
+      $data = $query->fetch_all();
+      foreach($data as $data);
+      ?>
+    <h3> <?=$data['id_petugas']?> </h3>
+    <div class="text-tanggapan"><?=$data['tanggapan']?></div> 
+   
   </div>
 </div>
     </div>
+</body>
+</html>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </hr>
-  </form>  
   </body>
-  </html>
+</html>
