@@ -53,7 +53,7 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan where id_pengaduan=$id" );
                 </div>
             </div>
         </div>
-<div class="card my-4 mt-3">
+<div class="card mt-5" style="width:80%;margin-left:20px">
     <h1>Data Pengaduan Masyarakat</h1>
   <div class="d-grip gap-2 col-12 mt-2">
   <table class="table table-light table-hover table-borderless">
@@ -86,17 +86,16 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan where id_pengaduan=$id" );
     <div class="">
       <?php
       $query=$db->query("select * from tanggapan where id_petugas=$id");
-      $data = $query->fetch_all();
-      foreach($data as $data);
-      ?>
+      $data = $query->fetchALL();
+      foreach($data as $data) : ?>
+      
     <h3> <?=$data['id_petugas']?> </h3>
     <div class="text-tanggapan"><?=$data['tanggapan']?></div> 
-   
+      <?php endforeach ?>
   </div>
 </div>
     </div>
 </body>
 </html>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </body>
 </html>

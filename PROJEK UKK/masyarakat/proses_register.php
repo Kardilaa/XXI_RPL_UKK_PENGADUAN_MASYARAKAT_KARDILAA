@@ -1,13 +1,15 @@
 <?php
-session_start();
-$Id=$_POST['id_petugas'];
-$Name = $_POST['Nama_petugas'];
-$Username = $_POST['username'];
-$Password =$_POST['password'];
-$No_Handphone =$_POST['tlp'];
+//include"koneksi.php"
+$nik=$_POST['nik'];
+$nama = $_POST['nama'];
+$username = $_POST['username'];
+$password =$_POST['password'];
+$telp =$_POST['telp'];
+//var_dum($_POST);
+
 $db =new PDO("mysql:host=localhost; dbname=pengaduan_masyarakat", "root", "");
-$query = $db->query("INSERT INTO petugas values('$Id','$Name','$Username','$Password',$No_Handphone')");
+$query = $db->query("INSERT INTO masyarakat values('$nik','$nama','$username','$password',$telp')");
 
 if($query){
-    header("Location:login.php");
+    header("Location:proses_login.php");
 }

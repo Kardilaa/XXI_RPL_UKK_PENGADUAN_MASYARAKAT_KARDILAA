@@ -63,11 +63,11 @@
                 <input class="rounded-3 border-light" type="date" name="tgl_pengaduan" 
                 style="width: 300px;">
               </div>    
-              <div class="mb-3 mt-3 text-center">
-                isi laporan : <br>
-                <input class="rounded-3 border-light " type="text" name="isi_laporan" 
-                style="width: 300px;">           
-      </div>
+              <div class="mb-3">
+              <center> 
+                <label for="exampleFormControlTextarea1" class="form-label">Isi Laporan</label>
+               <textarea class="form-control" name="isi_laporan" id="exampleFormControlTextarea1" rows="3" style="width: 300px;"></textarea></center>
+                </div>
               <div class="text-center mt-3"> 
                 <button type="submit" class="btn btn-success px-3 mb-3" style="width: 300px;">Simpan</button> <br>
                 

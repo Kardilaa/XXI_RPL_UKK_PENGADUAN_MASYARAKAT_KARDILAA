@@ -6,6 +6,8 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan");
 ?>
 <!Doctype html>
 <html lang="en">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -53,14 +55,16 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan");
             </div>
         </div>
         <form>
-<div class="card my-4 mt-3">
+<div class="card mt-5" style="width:80%;margin-left:20px">
     <h1>Data Pengaduan Masyarakat</h1>
-  <div class="d-grip gap-2 col-12 mt-2">
+  <div class="d-grip mt-2">
   <table class="table table-light table-hover table-borderless">
   <thead>
     <tr style="text-align:center;">
       <th scope="col">No</th>
+      <th scope="col">id_pengaduan</th>
       <th scope="col">tanggal_pengaduan</th>
+      <th scope="col">nik</th>
       <th scope="col">isi_laporan</th>
       <th scope="col">foto</th>
       <th scope="col">status</th>
@@ -72,14 +76,16 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan");
   <tbody>
     <tr class="text-center">
       <th scope="row"><?= $i ?></th>
+      <td><?=$row['id_pengaduan'];?></td>
       <td><?=$row['tgl_pengaduan'];?></td>
+      <td><?=$row['nik'];?></td>
       <td><?=$row['isi_laporan'];?></td>
-      <td><?=$row['foto'];?></td>
+      <td><img src="<?=$row['foto'];?>" width="30%" style="border-radius:10px"</td>
       <td><?=$row['status'];?></td>
       <td>
-      <a href="detail.php?id_pengaduan=<?php echo $row['id_pengaduan'];?>" class="btn btn-primary">detail</a>
-      <a href="update.php?id_pengaduan=<?php echo $row['id_pengaduan'];?>" class="btn btn-primary">UPDATE</a>
-        <a href="delete.php?id_pengaduan=<?=$data ['id_pengaduan'];?>"onclick="return confirm('anda yakin ingin hapus')" class="btn btn-danger btn-sm">DELETE</a>
+      <a href="detail.php?id_pengaduan=<?= $row['id_pengaduan'];?>" class="btn btn-success"><ion-icon name="albums-outline">Detail</a></ion-icon>
+      <a href="update.php?id_pengaduan=<?= $row['id_pengaduan'];?>" class="btn btn-primary"><ion-icon name="sync-outline">UPDATE</a></ion-icon>
+        <a href="delete.php?id_pengaduan=<?= $row ['id_pengaduan'];?>" class="btn btn-danger btn-sm"><ion-icon name="trash-outline">DELETE</a></ion-icon>
     </td>
     </tr>
     </tbody>
@@ -87,7 +93,7 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan");
     <?php endwhile ?>
     </table>
     <hr>
-   c
+   
   </div>
 </div>
     </div>

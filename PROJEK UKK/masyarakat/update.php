@@ -1,11 +1,11 @@
 <?php
 
-$id = $_GET['id'];
+$id_pengaduan = $_GET['id_pengaduan'];
 
-$db =new PDO("mysql:host=localhost;dbname=catatan_perjalanan", "root", "");
-$query = $db->query("SELECT * FROM `catatan_perjalanan` WHERE 'id'='$id'");
+$db =new PDO("mysql:host=localhost;dbname=pengaduan_masyarakat", "root", "");
+$query = $db->query("SELECT * FROM `pengaduan` WHERE `id_pengaduan`='$id_pengaduan'");
 
-$data=$query->fetch();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,26 +18,22 @@ $data=$query->fetch();
 </head>
 <body>
 <div style="padding: 50px;">
-        <form action="update.php"  method="POST">
+        <form action="proses_update.php"  method="POST">
         <div class="container mt-3">
         <div class="row" >
         <div class="col-md-6 offset-md-3">
         <div class="card my-6">
-          <input type="hidden" name="id" value="<?= $id?>">
+          <input type="hidden" name="id" value="<?= $id_pengaduan?>">
               <div class="mb-3 mt-3 text-center">
-                Tanggal : <br>
-                <input class="rounded-3 border-light" type="date" name="tanggal" style="width: 300px;" >
+                tanggal_pengaduan : <br>
+                <input class="rounded-3 border-light" type="date" name="tanggal_pengaduan" style="width: 300px;" >
               <div class="mb-3 mt-3 text-center">
-                Waktu : <br>
-                <input class="rounded-3 border-light" type="time" name="waktu" style="width: 300px;" >
+                isi_laporan : <br>
+                <input class="rounded-3 border-light" type="text" name="isi_laporan" style="width: 300px;" >
               </div>
               <div class="mb-3 mt-3 text-center">
-                lokasi : <br>
-                <input class="rounded-3 border-light" type="text" name="lokasi" style="width: 300px;" >
-              </div>
-              <div class="mb-3 mt-3 text-center">
-                Suhu Tubuh : <br>
-                <input class="rounded-3 border-light" type="text" name="suhu_tubuh" style="width: 300px;" >
+                foto : <br>
+                <input class="rounded-3 border-light" type="file" name="foto" style="width: 300px;" >
               </div>
               <div class="text-center mt-3"> 
                 <button type="submit" class="btn btn-success px-3 mb-3" style="width: 300px;">UPDATE</button> <br>

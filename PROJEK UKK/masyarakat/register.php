@@ -1,12 +1,3 @@
-<?php
-session_start();
-//include('koneksi.php');
-
-if(isset($_SESSION["username"])){
-    header("location:home.php");
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +8,7 @@ if(isset($_SESSION["username"])){
 </head>
 <body style="background:#44B5FF">
     <div style="padding: 50px;">
-        <form action="home.php"  method="POST">
+        <form action="proses_register.php"  method="POST">
        
         <div class="container mt-3">
         <div class="row" >
@@ -25,8 +16,8 @@ if(isset($_SESSION["username"])){
         <div class="card my-6">
             <h2 class="mb-3 mt-4 text-center" style="color:rgb(61, 61, 61);">REGISTER</h2>
               <div class="mb-3 mt-3 text-center">
-              Id  : <br>
-                <input class="rounded-3 border-light" type="text" name="id_petugas" 
+              nik  : <br>
+                <input class="rounded-3 border-light" type="text" name="nik" 
                 style="width: 300px;">
               </div>
               <div class="mb-3 mt-3 text-center">
@@ -54,10 +45,3 @@ if(isset($_SESSION["username"])){
             </form>
 </body>
 </html>
-<?php
-session_start();
-
-if(isset($_SESSION["username"])){
-    header("location:login.php");
-}
-?>
