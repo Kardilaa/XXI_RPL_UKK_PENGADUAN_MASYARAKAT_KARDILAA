@@ -3,9 +3,10 @@
 
 $username = $_POST['username'];
 $password = $_POST['password'];
+$level = $_POST['level'];
 
-$koneksi = new PDO("mysql:host=localhost;dbname=ppmukk", "root","");
-$query = $koneksi->query("SELECT * FROM masyarakat WHERE username='$username' AND password='$password'  ");
+$koneksi = new PDO("mysql:host=localhost;dbname=pengaduan_masyarakat", "root","");
+$query = $koneksi->query("SELECT * FROM petugas WHERE username='$username' AND password='$password'  ");
 $data=$query->fetch();
 // var_dump($query->rowCount());
     if($query->rowCount() > 0){
@@ -13,7 +14,7 @@ $data=$query->fetch();
 
         $_SESSION["username"] = $_POST['username'];
         $_SESSION["password"] = $_POST['password'];
-        $_SESSION["nik"] = $data['nik'];
+        $_SESSION["level"] = $_POST['level'];
         header("location:home.php");
     }else{
         header("location:login.php");

@@ -29,12 +29,12 @@ if(isset($_SESSION["username"])){
               <div class="mb-3 mt-3 text-center">
                 USERNAME : <br>
                 <input class="rounded-3 border-light" type="text" name="username" 
-                style="width: 300px;" placeholder="isi username">
+                style="width: 300px;">
               </div>
               <div class="mb-3 mt-3 text-center">
                 PASSWORD : <br>
                 <input class="rounded-3 border-light" type="password" name="password"
-                style="width: 300px;" placeholder="****">
+                style="width: 300px;">
                 </div>
               <div class="text-center mt-3"> 
 

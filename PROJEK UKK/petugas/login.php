@@ -18,7 +18,7 @@ if(isset($_SESSION["username"])){
 </head>
 <body style="background:#44B5FF" >
     <div style="padding: 50px;">
-        <form action="proses_login.php"  method="POST">
+        <form action="proses_login1.php"  method="POST">
         <div class="text-center fs-1"></div>
         <div class="container mt-3">
         <div class="row" >
@@ -29,18 +29,26 @@ if(isset($_SESSION["username"])){
               <div class="mb-3 mt-3 text-center">
                 USERNAME : <br>
                 <input class="rounded-3 border-light" type="text" name="username" 
-                style="width: 300px;" placeholder="isi username">
+                style="width: 300px;">
               </div>
               <div class="mb-3 mt-3 text-center">
                 PASSWORD : <br>
                 <input class="rounded-3 border-light" type="password" name="password"
-                style="width: 300px;" placeholder="****">
+                style="width: 300px;">
+                
+              </div>
+              <div class="mb-3 mt-3 text-center">
+              <option selected>Level</option>
+              <center><div><select class="form-select" aria-label="Default select example" type="text"  name="level"style="width: 300px;"></div></center>
+              <option value="1"></option>
+              <option value="1">Admin</option>
+              <option value="2">Petugas</option>
+</select>
                 </div>
               <div class="text-center mt-3"> 
 
                 <button type="submit" class="btn btn-success px-3 mb-3" style="width: 300px;">Login</button> <br>
-                <p><i>Belum Punya Akun? Click <a href="register.php" class="text-danger">Register</a></i></p>
-                </div>
+                
               </div>
               
             </form>

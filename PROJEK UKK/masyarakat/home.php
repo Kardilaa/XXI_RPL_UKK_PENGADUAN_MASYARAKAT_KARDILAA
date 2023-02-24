@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+if(!isset($_SESSION['username'])){
+  header("location:login.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -9,7 +18,7 @@
     <link href="style.css" rel="stylesheet">
     <title>home</title>
 </head>
-<body style="background:#44B5FF">
+<body style="background:#eeee">
 <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -20,37 +29,28 @@
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
                         <a href="home.php" class="nav-link align-middle px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none text-white d-sm-inline">Home</span>
                         </a>
                     </li>
                     <li>
                     <a href="datapengaduan.php" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-table"></i> <span class=" d-none d-sm-inline">Data Pengaduan</span></a>  
+                            <i class="fs-4 bi-table"></i> <span class=" d-none d-sm-inline text-white">Data Pengaduan</span></a>  
                            
                     </li>
                     <li>
                         <a href="isidata_pengaduan.php" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-table"></i> <span class=" d-none d-sm-inline">Laporan Pengaduan</span></a>
+                            <i class="fs-4 bi-table"></i> <span class=" d-none d-sm-inline text-white">Laporan Pengaduan</span></a>
                     </li>
                    
                     <li>
                         <a href="logout.php" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Logout</span> </a>
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline text-white">Logout</span> </a>
                     </li>
                 </ul>
-                <hr>
-                <div class="dropdown pb-4">
-                    <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="kaa.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
-                        <span class="d-none d-sm-inline mx-1">Member</span>
-                    </a>
-                    
-                </div>
             </div>
         </div>
         <div class="col py-3">
-            <h1> Selamat Datang Di Website</h1>
-            <!-- <?php echo $_SESSION['nama_petugas'];?> -->
+            <h1> Selamat Datang <?php echo $_SESSION['username']?> Di Website</h1>
             <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>

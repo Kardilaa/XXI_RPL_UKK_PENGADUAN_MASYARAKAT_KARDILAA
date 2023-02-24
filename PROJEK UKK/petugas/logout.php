@@ -16,8 +16,8 @@ session_destroy();
 <body >
 
 <div class="text-center mt-5">
-    <h1> A N D A &nbsp; S U D A H &nbsp;  K E L U A R </h1>
-    <button class="btn btn-danger"><a href="login.php" class="text-white">K E M B A L I </a></button>
+    <h1> A N D A S U D A H K E L U A R </h1>
+    <button class="btn btn-danger"><a href="login.php" class="text=white">K E M B A L I </a></button>
 </div>
 </body>
 </html>

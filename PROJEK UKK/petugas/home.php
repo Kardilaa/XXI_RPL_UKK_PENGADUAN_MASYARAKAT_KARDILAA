@@ -1,21 +1,16 @@
-<?php
-session_start();
-$db =mysqli_connect("localhost","root","","ppmukk");
-$result = mysqli_query($db,"SELECT * FROM pengaduan");
-
-?>
-<!Doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  </head>
-  <body style="background:#44B5FF">
-  <div class="container-fluid">
+<head>
+  
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <title>home</title>
+</head>
+<body style="background:#44B5FF">
+<div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
             <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
@@ -29,16 +24,15 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan");
                         </a>
                     </li>
                     <li>
-                        <a href="data_pengaduan.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Pengaduan</span> </a>
-                        <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                    <a href="datapengaduan.php" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-table"></i> <span class=" d-none d-sm-inline">Data Pengaduan</span></a>  
                            
                     </li>
                     <li>
                         <a href="isidata_pengaduan.php" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Laporan Pengaduan</span></a>
+                            <i class="fs-4 bi-table"></i> <span class=" d-none d-sm-inline">Laporan Pengaduan</span></a>
                     </li>
-                    
+                   
                     <li>
                         <a href="logout.php" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Logout</span> </a>
@@ -50,13 +44,16 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan");
                         <img src="kaa.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
                         <span class="d-none d-sm-inline mx-1">Member</span>
                     </a>
-                    
+
                 </div>
             </div>
         </div>
-        <form>
+</div>
+<div>
+<form>
 <div class="card mt-5" style="width:90%;margin-left:20px">
-    <h1>Data Pengaduan Masyarakat</h1>
+<h2>Anda Login Sebagai Petugas</h2>    
+<h1>Data Pengaduan Masyarakat</h1>
   <div class="d-grip mt-2">
   <table class="table table-light table-hover table-borderless">
   <thead>
@@ -80,7 +77,7 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan");
       <td><?=$row['tgl_pengaduan'];?></td>
       <td><?=$row['nik'];?></td>
       <td><?=$row['isi_laporan'];?></td>
-      <td><img src="<?=$row['foto'];?>" width="30%" style="border-radius: 10px;"/></td>
+      <td><img src="<?=$row['foto'];?>" width="30%" style="border-radius:10px"</td>
       <td><?=$row['status'];?></td>
       <td>
       <a href="detail.php?id_pengaduan=<?= $row['id_pengaduan'];?>" class="btn btn-success"><ion-icon name="albums-outline">Detail</a></ion-icon>
@@ -99,6 +96,10 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan");
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </hr>
-  </form>  
-  </body>
-  </html>
+
+  </form> 
+   
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -2,7 +2,7 @@
 
 $id_pengaduan = $_GET['id_pengaduan'];
 
-$db =new PDO("mysql:host=localhost;dbname=pengaduan_masyarakat", "root", "");
+$db =new PDO("mysql:host=localhost;dbname=ppmukk", "root", "");
 $query = $db->query("SELECT * FROM `pengaduan` WHERE `id_pengaduan`='$id_pengaduan'");
 
 
@@ -18,23 +18,26 @@ $query = $db->query("SELECT * FROM `pengaduan` WHERE `id_pengaduan`='$id_pengadu
 </head>
 <body>
 <div style="padding: 50px;">
-        <form action="proses_update.php"  method="POST">
+        <form action="proses_update.php?id_pengaduan=<?=$_GET['id_pengaduan']?>"  method="POST">
         <div class="container mt-3">
         <div class="row" >
         <div class="col-md-6 offset-md-3">
         <div class="card my-6">
-          <input type="hidden" name="id" value="<?= $id_pengaduan?>">
+          <input type="hidden" name="id_pengaduan" value="<?= $id_pengaduan?>">
               <div class="mb-3 mt-3 text-center">
                 tanggal_pengaduan : <br>
-                <input class="rounded-3 border-light" type="date" name="tanggal_pengaduan" style="width: 300px;" >
-              <div class="mb-3 mt-3 text-center">
-                isi_laporan : <br>
-                <input class="rounded-3 border-light" type="text" name="isi_laporan" style="width: 300px;" >
-              </div>
-              <div class="mb-3 mt-3 text-center">
-                foto : <br>
-                <input class="rounded-3 border-light" type="file" name="foto" style="width: 300px;" >
-              </div>
+                <input class="rounded-3 border-light" type="date" name="tgl_pengaduan" style="width: 300px;" >
+                <center> 
+                <label for="exampleFormControlTextarea1" class="form-label">Isi Laporan</label>
+               <textarea class="form-control" name="isi_laporan" id="exampleFormControlTextarea1" rows="3" style="width: 300px;"></textarea></center>
+                </div>
+                <tr><center>
+                        <td>foto</td>
+                        <td><div class="mb-3">
+                        <label for="formFileSm" class="form-label"></label>
+                        <input class="form-control form-control-sm" id="formFileSm" type="file"style="width: 300px;">
+                        </div></td>
+                    </tr></center>
               <div class="text-center mt-3"> 
                 <button type="submit" class="btn btn-success px-3 mb-3" style="width: 300px;">UPDATE</button> <br>
                 </div>

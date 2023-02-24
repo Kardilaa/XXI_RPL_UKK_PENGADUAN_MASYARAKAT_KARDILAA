@@ -1,6 +1,6 @@
 <?php
 session_start();
-$db =mysqli_connect("localhost","root","","pengaduan_masyarakat");
+$db =mysqli_connect("localhost","root","","ppmukk");
 $id=$_GET['id_pengaduan'];
 $result = mysqli_query($db,"SELECT * FROM pengaduan where id_pengaduan=$id" );
 

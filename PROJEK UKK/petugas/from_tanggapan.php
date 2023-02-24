@@ -9,7 +9,7 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
-  <body style="background:#44B5FF">
+  <body bg-secondary.bg-gradient>
   <div class="container-fluid">
     <div class="row flex-nowrap">
         <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
@@ -48,34 +48,12 @@
             </div>
         </div>
  <form action ="proses_tambahdata.php" method="POST" enctype="multipart/form-data">
-        <div class="container mt-3">
-        <div class="row" >
-        <div class="col-md-6 offset-md-3">
-        <div class="card my-6">
-            <h2 class="mb-3 mt-4 text-center" style="color:rgb(61, 61, 61);">Isi Data Yang Ingin Anda Keluhkan</h2>
-            <tr><center>
-                        <td>foto</td>
-                        <td><div class="mb-3">
-                        <label for="formFileSm" class="form-label"></label>
-                        <input class="form-control form-control-sm" id="formFileSm" type="file"style="width: 300px;">
-                        </div></td>
-                    </tr></center>  
-              <div class="mb-3 mt-3 text-center">
-                tanggal : <br>
-                <input class="rounded-3 border-light" type="date" name="tgl_pengaduan" 
-                style="width: 300px;">
-              </div>    
-              <div class="mb-3">
+     <h1> Tanggapan</h1> 
+     <div class="mb-3">
               <center> 
                 <label for="exampleFormControlTextarea1" class="form-label">Isi Laporan</label>
                <textarea class="form-control" name="isi_laporan" id="exampleFormControlTextarea1" rows="3" style="width: 300px;"></textarea></center>
-                </div>
-              <div class="text-center mt-3"> 
-                <button type="submit" class="btn btn-success px-3 mb-3" style="width: 300px;">Simpan</button> <br>
-                
-                </div>
-              </div>
-              </div>
+                </div>  
             </form>
     
   </body>
