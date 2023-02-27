@@ -1,16 +1,15 @@
 <?php
 
-session_start(); 
-
-$name = $_POST['nama'];
 $nik = $_POST['nik'];
+$name = $_POST['nama'];
 $usn = $_POST['username'];
-$ntlp = $_POST['telp'];
 $pass = $_POST['password'];
+$ntlp = $_POST['telp'];
 
 $k = new PDO('mysql:host=localhost;dbname=ppmukk','root','');
-$query = $k->query("INSERT INTO masyarakat VALUES ('$nik','$name', '$usn','$pass','$ntlp');");
+$query = $k->query("INSERT INTO `masyarakat` VALUES ('$nik','$name','$usn','$pass','$ntlp')");
 
 if($query){
-    header('location:login.php');
+    header('location:proses_login.php');
 }
+?>

@@ -74,7 +74,7 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan where id_pengaduan=$id" );
       <th scope="row"><?= $i ?></th>
       <td><?=$row['tgl_pengaduan'];?></td>
       <td><?=$row['isi_laporan'];?></td>
-      <td><?=$row['foto'];?></td>
+      <td><img src="img/<?=$row['foto']; ?>" width="100" height="100" style="border-radius: 10px;" /></td>
       <td><?=$row['status'];?></td>
      
     </tr>

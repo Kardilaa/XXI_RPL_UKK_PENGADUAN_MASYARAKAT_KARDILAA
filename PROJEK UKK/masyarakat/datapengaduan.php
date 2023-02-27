@@ -80,7 +80,7 @@ $result = mysqli_query($db,"SELECT * FROM pengaduan");
       <td><?=$row['tgl_pengaduan'];?></td>
       <td><?=$row['nik'];?></td>
       <td><?=$row['isi_laporan'];?></td>
-      <td><img src="<?=$row['foto'];?>" width="30%" style="border-radius: 10px;"/></td>
+      <td><img src="img/<?=$row['foto']; ?>" width="100" height="100" style="border-radius: 10px;" /></td>
       <td><?=$row['status'];?></td>
       <td>
       <a href="detail.php?id_pengaduan=<?= $row['id_pengaduan'];?>" class="btn btn-success"><ion-icon name="albums-outline">Detail</a></ion-icon>

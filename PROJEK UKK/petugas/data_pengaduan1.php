@@ -51,8 +51,8 @@
 
 <form>
 <div class="card mt-5" style="width:90%;margin-left:20px">
-    <h1>Selamat Datang Diwebsite Pengaduan Masyarakat</h1>
-    <h2>Anda Login Sebagai Petugas</h2>
+    <h1>Data Pengaduan Dari Masyarakat</h1>
+    
   </form>  
   </body>
   </html>

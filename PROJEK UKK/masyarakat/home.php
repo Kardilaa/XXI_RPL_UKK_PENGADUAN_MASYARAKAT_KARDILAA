@@ -50,7 +50,7 @@ if(!isset($_SESSION['username'])){
             </div>
         </div>
         <div class="col py-3">
-            <h1> Selamat Datang <?php echo $_SESSION['username']?> Di Website</h1>
+            <h1> Selamat Datang <?php echo $_SESSION['username']?> Di Website Pengaduan Masyarakat</h1>
             <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
