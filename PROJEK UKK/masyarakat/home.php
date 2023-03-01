@@ -16,7 +16,7 @@ if(!isset($_SESSION['username'])){
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet">
-    <title>home</title>
+    <title>masyarakat</title>
 </head>
 <body style="background:#eeee">
 <div class="container-fluid">
@@ -33,7 +33,7 @@ if(!isset($_SESSION['username'])){
                         </a>
                     </li>
                     <li>
-                    <a href="datapengaduan.php" class="nav-link px-0 align-middle">
+                    <a href="data_pengaduan.php" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-table"></i> <span class=" d-none d-sm-inline text-white">Data Pengaduan</span></a>  
                            
                     </li>

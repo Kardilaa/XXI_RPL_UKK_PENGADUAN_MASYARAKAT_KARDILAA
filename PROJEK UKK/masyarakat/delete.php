@@ -8,5 +8,5 @@ $query =$db->query("DELETE FROM `pengaduan` WHERE `id_pengaduan`= '$id'");
 
 if($query)
 {
-    header("Location:datapengaduan.php");
+    header("Location:data_pengaduan.php");
 }

@@ -1,24 +1,19 @@
 <?php
-
 session_start();
+$db =mysqli_connect("localhost","root","","ppmukk");
+$nik = $_SESSION['nik'];
+// die();
+$query = mysqli_query($db,"SELECT * FROM `pengaduan` where nik=$nik");
 
-if(isset($_SESSION['nama'])){
-header("location:detail.php");
-}
-
-$db = mysqli_connect("localhost","root","","ppmukk");
-$id= $_GET['id_pengaduan'];
-// echo $id;
-$result =mysqli_query($db,"SELECT * FROM pengaduan where id_pengaduan='$id'");
-//  var_dump($result);
-//  die();
 ?>
 <!Doctype html>
 <html lang="en">
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>masyrakat</title>
+    <title>Masyarakat</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   </head>
   <body style="background:#44B5FF">
@@ -79,7 +74,7 @@ $result =mysqli_query($db,"SELECT * FROM pengaduan where id_pengaduan='$id'");
     </tr>
   </thead>
   <?php $i=1;?>
-  <?php while($row =mysqli_fetch_assoc($result)):?>
+  <?php while($row = mysqli_fetch_assoc($query)):?>
   <tbody>
     <tr class="text-center">
       <th scope="row"><?= $i ?></th>
@@ -89,31 +84,21 @@ $result =mysqli_query($db,"SELECT * FROM pengaduan where id_pengaduan='$id'");
       <td><?=$row['isi_laporan'];?></td>
       <td><img src="img/<?=$row['foto']; ?>" width="100" height="100" style="border-radius: 10px;" /></td>
       <td><?=$row['status'];?></td>
-     
+      <td>
+      <a href="detail.php?id_pengaduan=<?= $row['id_pengaduan'];?>" class="btn btn-success"><ion-icon name="albums-outline">Detail</a></ion-icon>
+      <a href="update.php?id_pengaduan=<?= $row['id_pengaduan'];?>" class="btn btn-primary"><ion-icon name="sync-outline">UPDATE</a></ion-icon>
+        <a href="delete.php?id_pengaduan=<?= $row ['id_pengaduan'];?>" class="btn btn-danger btn-sm"><ion-icon name="trash-outline">DELETE</a></ion-icon>
+    </td>
     </tr>
     </tbody>
     <?php $i++; ?>
     <?php endwhile ?>
     </table>
-    <hr>
-    <h1>Tanggapan</h1>
-    <div class ="">
-    <?php
-
-    
-
-        $query=mysqli_query($db, "SELECT tanggapan.*, petugas.nama_petugas from tanggapan inner join petugas on petugas.id_petugas = tanggapan.id_petugas where id_pengaduan='$id'");
-       
-        while($data =mysqli_fetch_assoc($query)):
-    ?>
-        <h3><?=$data['nama_petugas']?></h3>
-    <div class ="text-tanggapan"><?=$data['tanggapan']?></div>
-    <?php endwhile ?>
   </div>
 </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </hr>
+  
   </form>  
   </body>
   </html>

@@ -11,14 +11,14 @@ if(isset($_SESSION["username"])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>login</title>
+    <title>admin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     
 </head>
 <body style="background:#44B5FF" >
     <div style="padding: 50px;">
-        <form action="proses_login.php"  method="POST">
+        <form action="proses_login2.php"  method="POST">
         <div class="text-center fs-1"></div>
         <div class="container mt-3">
         <div class="row" >

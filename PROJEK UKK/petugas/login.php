@@ -25,7 +25,7 @@ if(isset($_SESSION["username"])){
         <div class="col-md-6 offset-md-3">
         <div class="card my-6">
             <h2 class="mb-3 mt-4 text-center" style="color:rgb(61, 61, 61);">L O G I N</h2>
-            <center><img src="masyarakat/kaa.png"  width="200" height="150"></center>
+            <center><img src="logo login.jpg"  width="200" height="150"></center>
               <div class="mb-3 mt-3 text-center">
                 USERNAME : <br>
                 <input class="rounded-3 border-light" type="text" name="username" 
