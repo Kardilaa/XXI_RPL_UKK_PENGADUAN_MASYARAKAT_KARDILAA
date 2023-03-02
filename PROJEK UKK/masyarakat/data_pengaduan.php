@@ -2,8 +2,7 @@
 session_start();
 $db =mysqli_connect("localhost","root","","ppmukk");
 $nik = $_SESSION['nik'];
-// die();
-$query = mysqli_query($db,"SELECT * FROM `pengaduan` where nik=$nik");
+$query = mysqli_query($db,"SELECT * FROM `pengaduan` where nik='$nik'");
 
 ?>
 <!Doctype html>
@@ -42,14 +41,14 @@ $query = mysqli_query($db,"SELECT * FROM `pengaduan` where nik=$nik");
                     </li>
                     
                     <li>
-                        <a href="logout.php" class="nav-link px-0 align-middle">
+                        <a href="../logout.php" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Logout</span> </a>
                     </li>
                 </ul>
                 <hr>
                 <div class="dropdown pb-4">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="kaa.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                        <img src="img/kaa.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
                         <span class="d-none d-sm-inline mx-1">Member</span>
                     </a>
                     
@@ -64,7 +63,6 @@ $query = mysqli_query($db,"SELECT * FROM `pengaduan` where nik=$nik");
   <thead>
     <tr style="text-align:center;">
       <th scope="col">No</th>
-      <th scope="col">id_pengaduan</th>
       <th scope="col">tanggal_pengaduan</th>
       <th scope="col">nik</th>
       <th scope="col">isi_laporan</th>
@@ -77,12 +75,11 @@ $query = mysqli_query($db,"SELECT * FROM `pengaduan` where nik=$nik");
   <?php while($row = mysqli_fetch_assoc($query)):?>
   <tbody>
     <tr class="text-center">
-      <th scope="row"><?= $i ?></th>
-      <td><?=$row['id_pengaduan'];?></td>
+    <th scope="row"><?= $i ?></th>
       <td><?=$row['tgl_pengaduan'];?></td>
       <td><?=$row['nik'];?></td>
       <td><?=$row['isi_laporan'];?></td>
-      <td><img src="img/<?=$row['foto']; ?>" width="100" height="100" style="border-radius: 10px;" /></td>
+      <td><img src="img/<?$row['foto'];?>" width="100" height="100"/></td>
       <td><?=$row['status'];?></td>
       <td>
       <a href="detail.php?id_pengaduan=<?= $row['id_pengaduan'];?>" class="btn btn-success"><ion-icon name="albums-outline">Detail</a></ion-icon>

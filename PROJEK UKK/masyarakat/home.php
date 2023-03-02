@@ -43,14 +43,14 @@ if(!isset($_SESSION['username'])){
                     </li>
                    
                     <li>
-                        <a href="logout.php" class="nav-link px-0 align-middle">
+                        <a href="../logout.php" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline text-white">Logout</span> </a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="col py-3">
-            <h1> Selamat Datang <?php echo $_SESSION['username']?> Di Website Pengaduan Masyarakat</h1>
+            <h1> Selamat Datang Di Website Pengaduan Masyarakat</h1>
             <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -59,21 +59,21 @@ if(!isset($_SESSION['username'])){
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="download.jpg" class="d-block w-100" alt=" ">
+      <img src="img/download.jpg" class="d-block w-100" alt=" ">
       <div class="carousel-caption d-none d-md-block">
         <h5>Website pengaduan masyarakat</h5>
         <p>merupakan suatu website yang dirancang khusus untuk memudahkah masyarakat untuk mengadukan keluhan kepada kantor desa wancimekar</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="kuu.jpg" class="d-block w-100" alt="ride">
+      <img src="img/kuu.jpg" class="d-block w-100" alt="ride">
       <div class="carousel-caption d-none d-md-block">
         <h5>Dari Rakyat, Oleh Rakyat, Dan Untuk Rakyat. </h5>
         <p>kami siap melayani semua keluh kesah rakyat agar rakyat merasa aman dan jangan takut semua data yang anda keluhkan akan kami jaga rahasia yaa</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="kii.jpg" class="d-block w-100" alt="ride">
+      <img src="img/kii.jpg" class="d-block w-100" alt="ride">
       <div class="carousel-caption d-none d-md-block">
         <h5>Third slide label</h5>
         <p>Some representative placeholder content for the third slide.</p>

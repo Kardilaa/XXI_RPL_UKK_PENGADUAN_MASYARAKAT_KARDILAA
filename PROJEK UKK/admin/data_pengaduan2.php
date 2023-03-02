@@ -12,15 +12,15 @@ $query = mysqli_query($db,"SELECT * FROM pengaduan");
   
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
-    <title>admin</title>
-    <style>
+   <style>
     @media print{
         .kolom_aksi, #button_print{
             display: none;
         }
     }
-    </style>
+   </style>
+    <title>home</title>
+    
 </head>
 <body>
 <div class="container-fluid">
@@ -43,7 +43,7 @@ $query = mysqli_query($db,"SELECT * FROM pengaduan");
                            
                     </li>
                     <li>
-                        <a href="logout.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                        <a href="../logout.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline"><ion-icon name="log-out-outline"Style="font-size:40px">logout</span> </a></ion-icon>
                         <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                            
@@ -51,8 +51,9 @@ $query = mysqli_query($db,"SELECT * FROM pengaduan");
             </div>
         </div>
 <div class="col-sm p-3 min-vh-100">
-    <button class="btn btn-warning" id="button_print">Print</button>
-
+    <button class="btn btn-warning" id="button_print">print</button>
+    <div class="container mt-5">
+        <table class="table table-hover table-light">
 <form>
 <div class="card mt-5" style="width:90%;margin-left:20px">
     <h1>Data Pengaduan Dari Masyarakat</h1>
@@ -79,7 +80,7 @@ $query = mysqli_query($db,"SELECT * FROM pengaduan");
       <td><?=$row['tgl_pengaduan'];?></td>
       <td><?=$row['nik'];?></td>
       <td><?=$row['isi_laporan'];?></td>
-      <td><img src="img/<?=$row['foto']; ?>" width="100" height="100" style="border-radius: 10px;" /></td>
+      <td><img src="../masyarakat/img/<?=$row['foto']; ?>" width="100" height="100" style="border-radius: 10px;" /></td>
       <td><?=$row['status'];?></td>
       <td>
       
@@ -98,10 +99,10 @@ $query = mysqli_query($db,"SELECT * FROM pengaduan");
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </hr>
   </form>  
-  <script>
+ <script>
     var button_print = document.getElementById('button_print');
-    button_print.addEventlistener('click',function(){
-        
+    button_print.addEventListener('click',function(){
+        window.print();
     });
   </script>
   </body>

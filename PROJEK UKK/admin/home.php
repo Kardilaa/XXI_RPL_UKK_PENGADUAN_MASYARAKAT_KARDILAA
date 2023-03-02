@@ -24,13 +24,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="data_pengaduan1.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                        <a href="data_pengaduan2.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline"><ion-icon name="grid-outline"Style="font-size:40px">Pengaduan</span> </a></ion-icon>
                         <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                            
                     </li>
                     <li>
-                        <a href="logout.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                        <a href="../logout.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline"><ion-icon name="log-out-outline"Style="font-size:40px">logout</span> </a></ion-icon>
                         <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                            
@@ -41,7 +41,7 @@
 <form>
 <div class="card mt-5" style="width:90%;margin-left:20px">
     <h1>Selamat Datang Diwebsite Pengaduan Masyarakat</h1>
-    <h2>Anda Login Sebagai Petugas</h2>
+    <h2>Anda Login Sebagai </h2>
   </form>  
   </body>
   </html>

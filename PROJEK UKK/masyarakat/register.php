@@ -5,7 +5,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">
 </head>
-<body style="font-family: 'Poppins', sans-serif;background: #B7C4CF;">
+<body style="font-family: 'Poppins', sans-serif;background: #44B5FF">
     <div style="padding: 50px;">
         <form action="proses_register.php"  method="POST">
         <div class="container mt-3">
@@ -28,11 +28,15 @@
               </div>
               <div class="mb-3 mt-3 text-center text-white">
                 Nomor Telepon : <br>
-                <input class="rounded-3 border-light" type="text" name="telp" placeholder="insert your phone number" style="width: 300px;" required>
+                <input class="rounded-3 border-light" type="number" name="telp" placeholder="insert your phone number" style="width: 300px;" required>
               </div>
               <div class="mb-3 mt-3 text-center text-white">
                 Password : <br>
                 <input class="rounded-3 border-light" type="password" name="password" placeholder="insert you password" style="width: 300px;"required>
+              </div>
+              <div class="mb-3 mt-3 text-center text-white">
+                Level : <br>
+                <input class="rounded-3 border-light" type="level" name="level" placeholder="insert you Level" style="width: 300px;"required>
               </div>
               <div class="mb-3 mt-3 text-center ">
                 <button type="submit" class="btn btn-primary">Simpan</button>

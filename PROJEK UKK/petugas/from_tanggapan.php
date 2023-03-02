@@ -38,7 +38,7 @@ $data = $query->fetchAll();
                            
                     </li>
                     <li>
-                        <a href="logout.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                        <a href="../logout.php" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline"><ion-icon name="log-out-outline"Style="font-size:40px">logout</span> </a></ion-icon>
                         <ul class="collapse show nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                            

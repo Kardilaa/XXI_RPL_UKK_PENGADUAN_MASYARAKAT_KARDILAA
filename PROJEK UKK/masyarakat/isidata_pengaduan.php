@@ -1,4 +1,7 @@
+<?php
+include "../function/koneksi.php";
 
+?>
 <!doctype html>
 <html lang="en">
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -33,14 +36,14 @@
                     </li>
                     
                     <li>
-                        <a href="logout.php" class="nav-link px-0 align-middle">
+                        <a href="../logout.php" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Logout</span> </a>
                     </li>
                 </ul>
                 <hr>
                 <div class="dropdown pb-4">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="kaa.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                        <img src="img/kaa.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
                         <span class="d-none d-sm-inline mx-1">Member</span>
                     </a>
                     
@@ -53,11 +56,12 @@
         <div class="col-md-6 offset-md-3">
         <div class="card my-6">
             <h2 class="mb-3 mt-4 text-center" style="color:rgb(61, 61, 61);">Isi Data Yang Ingin Anda Keluhkan</h2>
+            <form action="proses_tambahdata.php" method="POST" enctype='multipart/form-data'>
             <tr><center>
                         <td>foto</td>
                         <td><div class="mb-3">
                         <label for="formFileSm" class="form-label"></label>
-                        <input class="form-control form-control-sm" id="formFileSm" type="file"style="width: 300px;">
+                        <input class="form-control form-control-sm" name="foto" id="formFileSm" type="file"style="width: 300px;">
                         </div></td>
                     </tr></center>  
               <div class="mb-3 mt-3 text-center">

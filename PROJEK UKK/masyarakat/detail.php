@@ -2,10 +2,6 @@
 
 session_start();
 
-if(isset($_SESSION['nama'])){
-header("location:detail.php");
-}
-
 $db = mysqli_connect("localhost","root","","ppmukk");
 $id= $_GET['id_pengaduan'];
 // echo $id;
@@ -47,14 +43,14 @@ $result =mysqli_query($db,"SELECT * FROM pengaduan where id_pengaduan='$id'");
                     </li>
                     
                     <li>
-                        <a href="logout.php" class="nav-link px-0 align-middle">
+                        <a href="../logout.php" class="nav-link px-0 align-middle">
                             <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline">Logout</span> </a>
                     </li>
                 </ul>
                 <hr>
                 <div class="dropdown pb-4">
                     <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="kaa.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
+                        <img src="img/kaa.png" alt="hugenerd" width="30" height="30" class="rounded-circle">
                         <span class="d-none d-sm-inline mx-1">Member</span>
                     </a>
                     
@@ -104,10 +100,10 @@ $result =mysqli_query($db,"SELECT * FROM pengaduan where id_pengaduan='$id'");
 
         $query=mysqli_query($db, "SELECT tanggapan.*, petugas.nama_petugas from tanggapan inner join petugas on petugas.id_petugas = tanggapan.id_petugas where id_pengaduan='$id'");
        
-        while($data =mysqli_fetch_assoc($query)):
+        while($row =mysqli_fetch_assoc($query)):
     ?>
-        <h3><?=$data['nama_petugas']?></h3>
-    <div class ="text-tanggapan"><?=$data['tanggapan']?></div>
+        <h3><?=$row['nama_petugas']?></h3>
+    <div class ="text-tanggapan"><?=$row['tanggapan']?></div>
     <?php endwhile ?>
   </div>
 </div>

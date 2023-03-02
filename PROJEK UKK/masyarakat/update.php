@@ -35,7 +35,7 @@ $query = $db->query("SELECT * FROM `pengaduan` WHERE `id_pengaduan`='$id_pengadu
                         <td>foto</td>
                         <td><div class="mb-3">
                         <label for="formFileSm" class="form-label"></label>
-                        <input class="form-control form-control-sm" id="formFileSm" type="file"style="width: 300px;">
+                        <input class="form-control form-control-sm" name="foto"type="file"  id="formFileSm" style="width: 300px;">
                         </div></td>
                     </tr></center>
               <div class="text-center mt-3"> 
