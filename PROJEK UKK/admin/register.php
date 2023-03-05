@@ -42,9 +42,8 @@
                    
             </div>
         </div>
-        <form>
     <div style="padding: 50px;">
-        <form action="regiter2.php"  method="POST">
+        <form action="proses_register.php"  method="POST">
         <div class="container mt-3">
         <div class="row" >
         <div class="col-md-6 offset-md-3">
@@ -65,15 +64,15 @@
               </div>
               <div class="mb-3 mt-3 text-center text-white">
                 Nomor Telepon : <br>
-                <input class="rounded-3 border-light" type="number" name="telp" placeholder="insert your phone number" style="width: 300px;" required>
+                <input class="rounded-3 border-light" type="text" name="telp" placeholder="insert your phone number" style="width: 300px;" required>
               </div>
               <div class="mb-3 mt-3 text-center text-white">
                 Password : <br>
-                <input class="rounded-3 border-light" type="password" name="password" placeholder="insert you password" style="width: 300px;"required>
+                <input class="rounded-3 border-light" type="password" name="password" placeholder="insert your password" style="width: 300px;"required>
               </div>
               <div class="mb-3 mt-3 text-center text-white">
                 Level : <br>
-                <input class="rounded-3 border-light" type="level" name="level" placeholder="insert you Level" style="width: 300px;"required>
+                <input class="rounded-3 border-light" type="text" name="level" placeholder="insert you Level" style="width: 300px;"required>
               </div>
               <div class="mb-3 mt-3 text-center ">
                 <button type="submit" class="btn btn-primary">Simpan</button>

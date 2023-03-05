@@ -1,16 +1,16 @@
 <?php
 
-$nik = $_POST['nik'];
-$name = $_POST['nama'];
+$id = $_POST['id_petugas'];
+$name = $_POST['nama_petugas'];
 $usn = $_POST['username'];
 $pass = $_POST['password'];
-$ntlp = $_POST['telp'];
-$level = $_POST['level'];
+$tlp = $_POST['telp'];
+$lvl = $_POST['level'];
 
 $k = new PDO('mysql:host=localhost;dbname=ppmukk','root','');
-$query = $k->query("INSERT INTO `petugas` VALUES ('$nik','$name','$usn','$pass','$ntlp','$level')");
+$query = $k->query("INSERT INTO `petugas`(`id_petugas`, `nama_petugas`, `username`, `password`, `telp`, `level`) VALUES ('$id','$name','$usn','$pass','$tlp','$lvl')");
 
 if($query){
-    header('location:../login.php');
+    header('location:home.php');
 }
 ?>
